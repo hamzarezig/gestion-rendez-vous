@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'gestion_rdv';
 $username = 'root';
-$password = '';
+$password = 'open';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

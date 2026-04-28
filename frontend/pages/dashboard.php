@@ -13,6 +13,7 @@ $stmt = $pdo->prepare("
 ");
 $stmt->execute([$_SESSION['user_id']]);
 $rdvs = $stmt->fetchAll();
+$role = $_SESSION['role'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,6 +32,11 @@ $rdvs = $stmt->fetchAll();
             <span>Bonjour <?php echo htmlspecialchars($_SESSION['user_prenom']); ?></span>
             <a href="dashboard.php">Tableau de bord</a>
             <a href="recherche_rdv.php">Prendre RDV</a>
+            <?php if ($role === 'docteur'): ?>
+                <a href="doctor_dashboard.php">Planning</a>
+            <?php endif; ?>
+            <a href="notifications.php">🔔 Notifications</a>
+
             <a href="../../backend/api/logout.php">Déconnexion</a>
         </div>
     </div>

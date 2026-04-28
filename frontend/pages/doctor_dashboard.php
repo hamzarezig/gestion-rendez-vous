@@ -25,6 +25,7 @@ $doctor = $stmt->fetch();
             <span>Dr. <?php echo htmlspecialchars($_SESSION['user_prenom']); ?></span>
             <a href="doctor_dashboard.php">Planning</a>
             <a href="horaires.php">Horaires</a>
+            <a href="dashboard.php">Tableau de bord</a>
             <a href="../../backend/api/logout.php">Déconnexion</a>
         </div>
     </div>
